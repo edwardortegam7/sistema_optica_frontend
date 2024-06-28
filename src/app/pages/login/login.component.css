@@ -1,0 +1,14 @@
+.full-width {
+    width: 90%;
+}
+
+.btn-iniciar-sesion {
+    background-color: black !important;
+    color: white !important;
+}
+
+.btn-limpiar {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+}

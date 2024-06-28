@@ -1,0 +1,10 @@
+.btn-registrar {
+    background-color: black;
+    color: white;
+}
+
+.btn-limpiar {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}

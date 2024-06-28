@@ -1,0 +1,18 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+
+/* styles.css */
+.mat-toolbar {
+    font-size: 15px; /* Ajusta este valor según tus necesidades */
+  }
+  
+  .mat-toolbar a.example-icon,
+  .mat-toolbar span {
+    font-size: 15px; /* Ajusta este valor según tus necesidades */
+  }
+
+  .mat-toolbar {
+    background-color: #000000; /* Color negro */
+    color: #ffffff; /* Color blanco para el texto */
+  }
