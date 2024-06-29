@@ -7,6 +7,7 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
+import { AdministrativeComponent } from './pages/administrative/administrative.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,11 @@ const routes: Routes = [
     component: UserDashboardComponent,
     pathMatch:'full',
     canActivate: [NormalGuard]
+  },
+  {
+    path: 'administrative',
+    component: AdministrativeComponent,
+    pathMatch:'full',
   }
 ];
 
