@@ -15,7 +15,7 @@
     font-size: 70px !important;
 }
 .links {
-    display: flex !important;
+    display: inline-flex !important;
     flex-direction: column !important;
     padding: 0.5rem 1rem !important;
 }

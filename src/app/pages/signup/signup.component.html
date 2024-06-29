@@ -8,10 +8,9 @@
                 <h1 class="text-center">Registrate aqui</h1>
                 <form (ngSubmit)="formSubmit()">
                     <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Usuario</mat-label>
+                        <mat-label>Correo</mat-label>
                         <input required [(ngModel)]="user.username" name="username" matInput
                             placeholder="Digite su correo">
-                        <mat-hint>El nombre de usuario debe ser único</mat-hint>
                     </mat-form-field>
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Contraseña</mat-label>
@@ -36,7 +35,7 @@
                     <div class="container text-center">
                         <button mat-raised-button color="primary" class="btn-registrar">Registrar</button>
                         <button mat-raised-button color="accent" class="btn-limpiar" style="margin-left: 20px;"
-                            mat-raised-button color="accent">Limpiar</button>
+                            mat-raised-button color="accent" type="button" (click)="clearForm()">Limpiar</button>
                     </div>
                 </form>
             </div>
