@@ -1,0 +1,24 @@
+.tittle {
+    display: flex !important;
+}
+.tittle * {
+    padding: 0.5rem !important;
+}
+.welcome {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.welcome h1{
+    font-size: 70px !important;
+}
+.links {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0.5rem 1rem !important;
+}
+.links a {
+    margin: 0.5rem !important;
+    font-size: 20px !important;
+}
