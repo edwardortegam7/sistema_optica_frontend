@@ -1,10 +1,11 @@
-.tittle {
+.title {
     display: flex !important;
 }
-.tittle * {
-    padding: 0.5rem !important;
+.title img {
+    padding: 1.5rem !important;
 }
 .welcome {
+    padding: 0.5rem !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -21,4 +22,10 @@
 .links a {
     margin: 0.5rem !important;
     font-size: 20px !important;
+}
+.role {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0.5rem 1rem !important;
+    width: 100%;
 }
