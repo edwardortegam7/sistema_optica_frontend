@@ -54,10 +54,10 @@ export class LoginComponent implements OnInit {
             //window.location.href = '/admin';
             this.router.navigate(['admin']);
             this.loginService.loginStatusSubjec.next(true);
-          } else if (this.loginService.getUserRole() == 'NORMAL') {
+          } else if (this.loginService.getUserRole() == 'ADMINISTRATIVO') {
             //USER DASHBOARD
             //window.location.href = '/user-dashboard';
-            this.router.navigate(['user-dashboard']);
+            this.router.navigate(['administrative']);
             this.loginService.loginStatusSubjec.next(true);
           } else {
             this.loginService.logout();

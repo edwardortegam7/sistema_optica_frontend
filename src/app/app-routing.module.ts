@@ -8,6 +8,7 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
 import { AdministrativeComponent } from './pages/administrative/administrative.component';
+import { SelectRolComponent } from './pages/select-rol/select-rol.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,11 @@ const routes: Routes = [
   {
     path: 'administrative',
     component: AdministrativeComponent,
+    pathMatch:'full',
+  },
+  {
+    path: 'selected-role',
+    component: SelectRolComponent,
     pathMatch:'full',
   }
 ];

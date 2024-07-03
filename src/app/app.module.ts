@@ -22,6 +22,7 @@ import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { AdministrativeComponent } from './pages/administrative/administrative.component';
+import { SelectRolComponent } from './pages/select-rol/select-rol.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AdministrativeComponent } from './pages/administrative/administrative.c
     DashboardComponent,
     UserDashboardComponent,
     AdministrativeComponent,
+    SelectRolComponent,
   ],
   imports: [
     BrowserModule,
