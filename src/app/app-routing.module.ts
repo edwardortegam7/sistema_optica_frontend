@@ -10,6 +10,7 @@ import { NormalGuard } from './services/normal.guard';
 import { AdministrativeComponent } from './pages/administrative/administrative.component';
 import { SelectRolComponent } from './pages/select-rol/select-rol.component';
 
+
 const routes: Routes = [
   {
     path:'',
