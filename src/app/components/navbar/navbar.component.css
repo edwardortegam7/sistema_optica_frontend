@@ -10,9 +10,14 @@
   .mat-toolbar a.example-icon,
   .mat-toolbar span {
     font-size: 15px; /* Ajusta este valor según tus necesidades */
+    padding: 0.5rem;
   }
 
   .mat-toolbar {
     background-color: #000000; /* Color negro */
     color: #ffffff; /* Color blanco para el texto */
+  }
+
+  .mat-toolbar a {
+    padding: 0 0.5rem !important;
   }
