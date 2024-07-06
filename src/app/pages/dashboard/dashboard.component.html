@@ -15,4 +15,20 @@
         <a  [routerLink]="'/selected-role'">Agregar empleado</a>
         <a [routerLink]="">Lista de empleados</a>
     </div>
+    <div *ngIf="role === 'ADMINISTRATIVO'" class="links">
+        <a  [routerLink]="'/selected-role'">Agendar cita</a>
+        <a [routerLink]="">Lista de clientes</a>
+    </div>
+    <div *ngIf="role === 'VENDEDOR'" class="links">
+        <a  [routerLink]="'/selected-role'">Productos</a>
+        <a [routerLink]="">Historial</a>
+    </div>
+    <div *ngIf="role === 'DOCTOR'" class="links">
+        <a  [routerLink]="'/selected-role'">Pacientes</a>
+        <a [routerLink]="">Agenda</a>
+    </div>
+    <div *ngIf="role === 'CLIENTE'" class="links">
+        <a  [routerLink]="'/selected-role'">Solicitar cita</a>
+        <a [routerLink]=""></a>
+    </div>
 </div>
