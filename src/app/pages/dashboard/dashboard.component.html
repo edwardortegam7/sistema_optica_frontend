@@ -5,14 +5,14 @@
             <div>
                 <h1>BIENVENIDO!!!</h1>
             </div>
-            <div class="role">
-                <h3>Cliente</h3>
+            <div *ngIf="user" class="role">
+                <h3>{{role}}</h3>
             </div>
         </div>
     </div>
     <br>
     <div class="links">
-        <a href="">Agregar enlace</a>
-        <a href="">Agregar enlace</a>
+        <a [routerLink]="'/selected-role'">Agregar empleado</a>
+        <a [routerLink]="">Lista de empleados</a>
     </div>
 </div>
