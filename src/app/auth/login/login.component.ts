@@ -49,25 +49,18 @@ export class LoginComponent implements OnInit {
           this.loginService.setUser(user);
           console.log(user);
 
-          if (this.loginService.getUserRole() == 'ADMINISTRADOR') {
+          if (this.loginService.getUserRole()) {
             //dashboard admin
             //window.location.href = '/admin';
-            this.router.navigate(['admin']);
+            this.router.navigate(['dashboard']);
             this.loginService.loginStatusSubjec.next(true);
-          } else if (this.loginService.getUserRole() == 'ADMINISTRATIVO') {
-            //USER DASHBOARD
-            //window.location.href = '/user-dashboard';
-            this.router.navigate(['administrative']);
-            this.loginService.loginStatusSubjec.next(true);
-          } else {
-            this.loginService.logout();
           }
         });
       },
       (error) => {
         console.log(error);
         this.snack.open('Detalles invalidos, vuelva a intentar', 'Aceptar', {
-          duration: 3000,
+          duration: 1000,
         });
       }
     );

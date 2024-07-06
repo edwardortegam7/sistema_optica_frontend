@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { MatButtonModule } from '@angular/material/button';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { LoginComponent } from './pages/login/login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { LoginComponent } from './auth/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeComponent } from './pages/home/home.component';
@@ -19,22 +19,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { authInterceptorProviders } from './services/auth.interceptor';
-import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
-import { AdministrativeComponent } from './pages/administrative/administrative.component';
 import { SelectRolComponent } from './pages/select-rol/select-rol.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     SignupComponent,
-    LoginComponent,
     HomeComponent,
-    DashboardComponent,
-    UserDashboardComponent,
-    AdministrativeComponent,
+    NavbarComponent,
+    LoginComponent,
     SelectRolComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
