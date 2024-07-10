@@ -1,0 +1,8 @@
+.full-width-table {
+  width: 100%;
+  justify-content: center !important;
+}
+
+.mat-elevation-z8 {
+  padding: 2rem !important;
+}

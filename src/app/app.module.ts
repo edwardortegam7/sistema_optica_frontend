@@ -27,6 +27,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
+import { TableEmployeesComponent } from './pages/table-employees/table-employees.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,7 @@ import {MatSelectModule} from '@angular/material/select';
     LoginComponent,
     SelectRolComponent,
     DashboardComponent,
+    TableEmployeesComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +59,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatMenuModule,
     MatListModule,
     MatSelectModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [provideAnimationsAsync(), authInterceptorProviders],
   bootstrap: [AppComponent],

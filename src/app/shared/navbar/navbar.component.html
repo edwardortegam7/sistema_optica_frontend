@@ -34,7 +34,7 @@
     <mat-nav-list>
       <a mat-list-item [routerLink]="'/dashboard'">Inicio</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRADOR'" [routerLink]="'/selected-role'">Agregar Empleado</a>
-      <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRADOR'" [routerLink]="'/selected-role'">Listar empleados</a>
+      <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRADOR'" [routerLink]="'/table-employees'">Listar empleados</a>
       <!-- Añade más opciones según el rol del usuario -->
     </mat-nav-list>
   </mat-sidenav>

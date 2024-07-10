@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../services/user/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -21,7 +22,7 @@ export class SignupComponent implements OnInit {
     fecha_nacimiento: '',
   };
 
-  constructor(private userService: UserService, private snack: MatSnackBar) {}
+  constructor(private userService: UserService, private snack: MatSnackBar, private router: Router) {}
   ngOnInit(): void {
   }
   formSubmit() {
@@ -106,6 +107,8 @@ export class SignupComponent implements OnInit {
           'Usuario registrado con exito',
           'success'
         );
+        this.router.navigate(['login']);
+
       },
       (error) => {
         console.log(error);
