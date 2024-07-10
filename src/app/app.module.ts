@@ -22,6 +22,12 @@ import { authInterceptorProviders } from './services/auth.interceptor';
 import { SelectRolComponent } from './pages/select-rol/select-rol.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
+
+import { MatMenuModule } from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +50,10 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatListModule,
+    MatSelectModule,
   ],
   providers: [provideAnimationsAsync(), authInterceptorProviders],
   bootstrap: [AppComponent],

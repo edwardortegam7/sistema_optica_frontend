@@ -21,3 +21,15 @@
   .mat-toolbar a {
     padding: 0 0.5rem !important;
   }
+
+  .example-container {
+    height: 100%;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  mat-sidenav {
+    width: 250px;
+  }
