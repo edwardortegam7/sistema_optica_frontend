@@ -7,6 +7,7 @@ import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
 import { SelectRolComponent } from './pages/select-rol/select-rol.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { TableEmployeesComponent } from './pages/table-employees/table-employees.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,11 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    pathMatch:'full',
+  },
+  {
+    path: 'table-employees',
+    component: TableEmployeesComponent,
     pathMatch:'full',
   }
 ];
