@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
-import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import moment from 'moment';
-import 'moment/locale/es';
 
 @Component({
   selector: 'app-signup',
