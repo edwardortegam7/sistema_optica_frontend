@@ -19,7 +19,6 @@ export class SignupComponent implements OnInit {
     genero:'',
     telefono: '',
     direccion:'',
-    fecha_nacimiento: '',
   };
 
   constructor(private userService: UserService, private snack: MatSnackBar, private router: Router) {}
@@ -99,7 +98,7 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    this.userService.añadirUsuario(this.user).subscribe(
+    this.userService.añadirCliente(this.user).subscribe(
       (data) => {
         console.log(data);
         Swal.fire(
@@ -149,7 +148,6 @@ isValidEmail(email: string): boolean {
       genero:'',
       telefono: '',
       direccion:'',
-      fecha_nacimiento: '',
     };
   }
 }

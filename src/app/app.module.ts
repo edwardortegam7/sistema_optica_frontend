@@ -31,6 +31,7 @@ import { TableEmployeesComponent } from './pages/table-employees/table-employees
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { UserService } from './services/user/user.service';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatSortModule,
   ],
-  providers: [provideAnimationsAsync(), authInterceptorProviders],
+  providers: [provideAnimationsAsync(), authInterceptorProviders, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,18 +1,85 @@
-<section class="container">
-    <h1>Seleccione el Tipo de Empleado</h1>
-    <div class="button-container">
-        <a href="registro_administrativo.html" class="employee-button">
-            <i class="fas fa-user-tie"></i>
-            <span>Administrativo</span>
-        </a>
-        <a href="registro_vendedor.html" class="employee-button">
-            <i class="fas fa-user-tag"></i>
-            <span>Vendedor</span>
-        </a>
-        <a href="registro_doctor.html" class="employee-button">
-            <i class="fas fa-user-md"></i>
-            <span>Doctor</span>
-        </a>
-    </div>
-    
+<section>
+    <form (ngSubmit)="formSubmit()" class="example-form">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Company (disabled)" disabled value="Datos empelado">
+        </mat-form-field>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Dni">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-select placeholder="Género" name="genero">
+                            <mat-option value="Masculino">Masculino</mat-option>
+                            <mat-option value="Femenino">Femenino</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Nombre">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Apellidos">
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Teléfono">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Edad">
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Dirección">
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+        <mat-label>Fecha de nacimiento</mat-label>
+        <mat-form-field class="example-full-width">
+            <input required name="fechaNacimiento" matInput type="date">
+        </mat-form-field>
+
+        <h1>Seleccione el Tipo de Empleado</h1>
+        <div class="button-container">
+            <a href="registro_administrativo.html" class="employee-button">
+                <i class="fas fa-user-tie"></i>
+                <span>Administrativo</span>
+            </a>
+            <a href="registro_vendedor.html" class="employee-button">
+                <i class="fas fa-user-tag"></i>
+                <span>Vendedor</span>
+            </a>
+            <a href="registro_doctor.html" class="employee-button">
+                <i class="fas fa-user-md"></i>
+                <span>Doctor</span>
+            </a>
+        </div>
+    </form>
 </section>

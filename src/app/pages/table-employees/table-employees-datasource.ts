@@ -14,22 +14,13 @@ export interface TableEmployeesItem {
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: TableEmployeesItem[] = [
-  {dni: '1', name: 'Hydrogen', lastname: '10', phone: 121212121, rol:'ADMINISTRATIVO'},
-  {dni: '2', name: 'Helium', lastname: '10', phone: 121212121, rol:'ADMINISTRATIVO'},
-  {dni: '3', name: 'Lithium', lastname: '10', phone: 121212121, rol:'ADMINISTRATIVO'},
-  {dni: '4', name: 'Beryllium', lastname: '10', phone: 121212121, rol:'ADMINISTRATIVO'},
-  {dni: '6', name: 'Carbon', lastname: '10', phone: 121212121, rol:'ADMINISTRATIVO'},
-  {dni: '7', name: 'Nitrogen', lastname: '10', phone: 121212121, rol:'ADMINISTRATIVO'},
-];
-
 /**
  * Data source for the TableEmployees view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
 export class TableEmployeesDataSource extends DataSource<TableEmployeesItem> {
-  data: TableEmployeesItem[] = EXAMPLE_DATA;
+  data: TableEmployeesItem[] = [];
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
