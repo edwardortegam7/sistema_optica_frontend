@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import baseUrl from '../helper';
 
 @Injectable({
@@ -56,4 +56,10 @@ export class LoginService {
   public getCurrentUser() {
     return this.http.get(`${baseUrl}/actual-usuario`);
   }
+/*
+  // Verificar si el usuario es cliente
+  public isCliente(username: string): Observable<boolean> {
+    return this.http.get<boolean>(`${baseUrl}/es-cliente/${username}`);
+  }
+    */
 }

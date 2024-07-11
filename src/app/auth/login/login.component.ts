@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
       });
       return;
     }
+
     this.loginService.generateToken(this.loginData).subscribe(
       (data: any) => {
         console.log(data);
@@ -48,13 +49,14 @@ export class LoginComponent implements OnInit {
         this.loginService.getCurrentUser().subscribe((user: any) => {
           this.loginService.setUser(user);
           console.log(user);
-
+          this.router.navigate(['dashboard']);
+          this.loginService.loginStatusSubjec.next(true);
+/*
           if (this.loginService.getUserRole()) {
-            //dashboard admin
-            //window.location.href = '/admin';
             this.router.navigate(['dashboard']);
             this.loginService.loginStatusSubjec.next(true);
           }
+            */
         });
       },
       (error) => {
