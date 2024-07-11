@@ -12,7 +12,8 @@ export class NavbarComponent implements OnInit {
   user: any = null;
   opened = false; // Controla el estado del mat-sidenav
 
-  constructor(public login: LoginService) {}
+  constructor(public login: LoginService) {
+  }
 
   ngOnInit(): void {
     this.isLoggedIn = this.login.isLoggedIn();
@@ -36,7 +37,8 @@ export class NavbarComponent implements OnInit {
 
   public logout() {
     this.login.logout();
-    window.location.reload(); // Recargar la página al cerrar sesión
+    //window.location.reload(); // Recargar la página al cerrar sesión
+    window.location.href = '/';
   }
 }
 

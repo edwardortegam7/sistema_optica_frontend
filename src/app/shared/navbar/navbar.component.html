@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <!-- Botón de inicio (home) o botón de menú -->
   <ng-container *ngIf="!isLoggedIn; else loggedInTemplate">
-    <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <a [routerLink]="'/'" mat-icon-button class="example-icon mt20" aria-label="Example icon-button with menu icon">
       <mat-icon>home</mat-icon>
     </a>
   </ng-container>
@@ -19,7 +19,7 @@
   <!-- Opciones del menú o botones de autenticación -->
   <ng-container *ngIf="!isLoggedIn">
     <a [routerLink]="'/login'" mat-button>Iniciar sesión</a>
-    <a [routerLink]="'/signup'" mat-button>Registrar</a>
+    <a [routerLink]="'/signup'" mat-button>Registrarse</a>
   </ng-container>
 
   <ng-container *ngIf="isLoggedIn">
