@@ -98,7 +98,7 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    this.userService.añadirUsuario(this.user).subscribe(
+    this.userService.añadirCliente(this.user).subscribe(
       (data) => {
         console.log(data);
         Swal.fire(
