@@ -32,6 +32,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UserService } from './services/user/user.service';
+import { LoginClientComponent } from './auth/login-client/login-client.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { UserService } from './services/user/user.service';
     SelectRolComponent,
     DashboardComponent,
     TableEmployeesComponent,
+    LoginClientComponent,
   ],
   imports: [
     BrowserModule,
