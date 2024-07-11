@@ -1,24 +1,5 @@
-<!-- <section class="container">
-    <h1>Seleccione el Tipo de Empleado</h1>
-    <div class="button-container">
- 
-            <i class="fas fa-user-tie"></i>
-            <span>Administrativo</span>
-
-
-            <i class="fas fa-user-tag"></i>
-            <span>Vendedor</span>
-
-
-            <i class="fas fa-user-md"></i>
-            <span>Doctor</span>
-
-    </div>
-    
-</section> -->
-
 <section>
-    <form class="example-form">
+    <form (ngSubmit)="formSubmit()" class="example-form">
         <mat-form-field class="example-full-width">
             <input matInput placeholder="Company (disabled)" disabled value="Datos empelado">
         </mat-form-field>
@@ -88,19 +69,14 @@
         <h1>Seleccione el Tipo de Empleado</h1>
         <div class="button-container">
             <a href="registro_administrativo.html" class="employee-button">
-     
                 <i class="fas fa-user-tie"></i>
                 <span>Administrativo</span>
             </a>
             <a href="registro_vendedor.html" class="employee-button">
-    
-    
                 <i class="fas fa-user-tag"></i>
                 <span>Vendedor</span>
             </a>
             <a href="registro_doctor.html" class="employee-button">
-    
-    
                 <i class="fas fa-user-md"></i>
                 <span>Doctor</span>
             </a>
