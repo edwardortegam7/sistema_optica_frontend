@@ -9,7 +9,7 @@ import { LoginService } from '../../services/login/login.service';
 export class DashboardComponent implements OnInit {
   isLoggedIn: boolean = false;
   user: any = null;
-  role: any = null;
+  role: string = '';
 
   constructor(public login: LoginService){}
 

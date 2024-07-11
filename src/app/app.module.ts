@@ -32,7 +32,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UserService } from './services/user/user.service';
-import { LoginClientComponent } from './auth/login-client/login-client.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SolicitarCitaComponent } from './pages/solicitar-cita/solicitar-cita.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,7 @@ import { LoginClientComponent } from './auth/login-client/login-client.component
     SelectRolComponent,
     DashboardComponent,
     TableEmployeesComponent,
-    LoginClientComponent,
+    SolicitarCitaComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +67,8 @@ import { LoginClientComponent } from './auth/login-client/login-client.component
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    FontAwesomeModule,
+    ReactiveFormsModule,
   ],
   providers: [provideAnimationsAsync(), authInterceptorProviders, UserService],
   bootstrap: [AppComponent],
