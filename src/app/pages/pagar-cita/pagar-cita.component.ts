@@ -7,7 +7,7 @@ import { PagoService } from '../services/pago.service';
   styleUrls: ['./pagar-cita.component.css']
 })
 export class PagarCitaComponent {
-  montoAPagar: number = 0; // Puedes inicializarlo con el monto a pagar obtenido del sistema
+  montoAPagar: number = 0; 
   nombreTitular: string = '';
   numeroTarjeta: string = '';
   fechaExpiracion: string = '';
@@ -29,11 +29,11 @@ export class PagarCitaComponent {
     this.pagoService.realizarPago(datosPago).subscribe(
       respuesta => {
         alert('Pago realizado con éxito');
-        // Mostrar mensaje de éxito y manejar acciones adicionales según sea necesario
+        
       },
       error => {
         alert('Error al realizar el pago');
-        // Mostrar mensaje de error y manejar acciones adicionales según sea necesario
+        
       }
     );
   }
