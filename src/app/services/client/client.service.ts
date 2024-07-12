@@ -20,9 +20,5 @@ export class ClientService {
   public realizarPago(clienteId: number, datosPago: any) {
     
   }
-
-  public reciboPago(numeroOrden: string) {
-    
-  }
   
 }
