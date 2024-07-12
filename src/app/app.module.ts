@@ -49,6 +49,7 @@ import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes
     TableEmployeesComponent,
     SolicitarCitaComponent,
     SolicitudesCitasComponent,
+    PagarCitaComponent,
   ],
   imports: [
     BrowserModule,
