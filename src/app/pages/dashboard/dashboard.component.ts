@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../../services/login/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,23 +7,16 @@ import { LoginService } from '../../services/login/login.service';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent implements OnInit {
-  isLoggedIn: boolean = false;
-  user: any = null;
-  role: string = '';
 
-  constructor(public login: LoginService){}
+
+  constructor(public router: Router){}
 
   ngOnInit(): void {
-    this.isLoggedIn = this.login.isLoggedIn();
-    this.user = this.login.getUser();
-    this.role = this.login.getUserRole();
-    this.login.loginStatusSubjec.asObservable().subscribe(
-      data => {
-        this.isLoggedIn = this.login.isLoggedIn();
-        this.user = this.login.getUser();
-        this.role = this.login.getUserRole();
-      }
-    )
+    
+  }
+
+  goBack() {
+    this.router.navigate(['']);
   }
 }
 

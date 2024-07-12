@@ -35,10 +35,10 @@
       <a mat-list-item [routerLink]="''">Inicio</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRADOR'" [routerLink]="'/selected-role'">Agregar Empleado</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRADOR'" [routerLink]="'/table-employees'">Listar empleados</a>
-      <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRATIVO'" [routerLink]="''">Registrar cita</a>
-      <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRATIVO'" [routerLink]="''">Listar empleados</a>
+      <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRATIVO'" [routerLink]="'/dashboard'">lista de citas</a>
+      <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRATIVO'" [routerLink]="'/dashboard'">Listar de clientes</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === ''" [routerLink]="'/solicitar-cita'">Solicitar cita</a>
-      <a mat-list-item *ngIf="isLoggedIn && userRole === ''" [routerLink]="''">Ver Productos</a>
+      <a mat-list-item *ngIf="isLoggedIn && userRole === ''" [routerLink]="'/dashboard'">Ver Productos</a>
       <!-- Añade más opciones según el rol del usuario -->
     </mat-nav-list>
   </mat-sidenav>

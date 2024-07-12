@@ -1,28 +1,14 @@
-<section>
-    <div class="title">
-        <img src="../../../assets/imagenes/logo.png" alt="">
-        <div class="welcome">
-            <div>
-                <h1>BIENVENIDO!!!</h1>
-            </div>
-            <div *ngIf="user" class="role">
-                <h3>{{role}}</h3>
-            </div>
-        </div>
+<div class="container">
+    <div class="under-construction-wrapper">
+      <h1>¡Estamos en construcción!</h1>
+      <p>Estamos trabajando arduamente para mejorar tu experiencia.</p>
+  
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div>
+  
+      <p>Vuelve pronto para ver las novedades.</p>
+  
+      <button routerLink="/">Volver a la página principal</button>
     </div>
-    <br>
-</section>
-<section *ngIf="role === ''" class="container">
-
-    <div class="contenedor-botones">
-        <a class="boton boton-solicitar" [routerLink]="'/solicitar-cita'">
-            Solicitar cita
-            <i class="fa-solid fa-bookmark"></i>
-        </a>
-        <a class="boton boton-ver">
-            Ver citas
-            <i class="fa-solid fa-calendar-days"></i>
-        </a>
-    </div>
-
-</section>
+  </div>
