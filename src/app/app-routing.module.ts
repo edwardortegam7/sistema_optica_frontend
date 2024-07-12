@@ -7,6 +7,7 @@ import { SelectRolComponent } from './pages/select-rol/select-rol.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TableEmployeesComponent } from './pages/table-employees/table-employees.component';
 import { SolicitarCitaComponent } from './pages/solicitar-cita/solicitar-cita.component';
+import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes-citas.component';
 
 
 const routes: Routes = [
@@ -43,6 +44,11 @@ const routes: Routes = [
   {
     path: 'solicitar-cita',
     component: SolicitarCitaComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'solicitudes-citas',
+    component: SolicitudesCitasComponent,
     pathMatch: 'full',
   }
 ];

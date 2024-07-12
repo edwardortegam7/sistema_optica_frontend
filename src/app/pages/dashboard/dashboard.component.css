@@ -1,76 +1,47 @@
-a {
-    text-decoration: none;
-}
-
-.title {
-    display: flex !important;
-}
-.title img {
-    padding: 1.5rem !important;
-}
-.welcome {
-    padding: 0.5rem !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-.welcome h1{
-    font-size: 70px !important;
-}
-.links {
-    display: inline-flex !important;
-    flex-direction: column !important;
-    padding: 0.5rem 1rem !important;
-}
-.links a {
-    margin: 0.5rem !important;
-    font-size: 20px !important;
-}
-.role {
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 0.5rem 1rem !important;
-    width: 100%;
-}
-.contenedor-botones {
+.container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-/* Estilos de cada botón */
-.boton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 15px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 20px;
-}
-
-/* Botón solicitar cita */
-.boton-solicitar {
-    background-color: #4CAF50; /* Verde */
-    color: white;
-}
-
-/* Botón ver citas */
-.boton-ver {
-    background-color: #008CBA; /* Azul */
-    color: white;
-}
-
-/* Estilo al pasar el mouse sobre los botones */
-.boton:hover {
-    background-color: #222;
-    color: white;
-}
-
-.boton i {
-    margin: 0.5rem;
-}
-
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  .under-construction-wrapper {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .progress-bar-container {
+    width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 30px;
+    background-color: #e91e63;
+    animation: progress-bar-anim 3s linear infinite;
+  }
+  
+  @keyframes progress-bar-anim {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="filter-section">
+    <label for="servicioFilter">Filtrar por servicio:</label>
+    <select id="servicioFilter" [(ngModel)]="servicioFilter">
+      <option value="">Todos los servicios</option>
+      <option value="examen-vista">Examen de la vista</option>
+      <option value="adaptacion-lentes">Adaptación de lentes</option>
+      <option value="reparacion-lentes">Reparación de lentes</option>
+    </select>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" sortable (click)="onHeaderClick('nombre')">Nombre</th>
+        <th scope="col" sortable (click)="onHeaderClick('apellido')">Apellido</th>
+        <th scope="col" sortable (click)="onHeaderClick('telefono')">Teléfono</th>
+        <th scope="col" sortable (click)="onHeaderClick('correo')">Correo</th>
+        <th scope="col" sortable (click)="onHeaderClick('fecha')">Fecha</th>
+        <th scope="col" sortable (click)="onHeaderClick('hora')">Hora</th>
+        <th scope="col" sortable (click)="onHeaderClick('servicio')">Servicio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let solicitud of solicitudes">
+        <td>{{ solicitud[0] }}</td>
+        <td>{{ solicitud[1] }}</td>
+        <td>{{ solicitud[2] }}</td>
+        <td>{{ solicitud[3] }}</td>
+        <td>{{ solicitud[4] | date }}</td>
+        <td>{{ solicitud[5] }}</td>
+        <td>{{ solicitud[6] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

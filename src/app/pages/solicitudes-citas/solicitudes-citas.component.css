@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+  }
+  
+  .table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: none;
+  }
+  
+  .table th {
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .table th.active {
+    background-color: #4CAF50; /* Green background for active header */
+  }
+  
+  .table th.active i {
+    transform: rotate(180deg); /* Rotate arrow icon on active header */
+  }
+  
+  .table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    border: none;
+  }
+  
+  .table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+
+  .filter-section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter-section select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

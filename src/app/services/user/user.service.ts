@@ -21,4 +21,8 @@ export class UserService {
   public getEmployees(): Observable<any> {
     return this.httpClient.get(`${baseUrl}/usuarios/get-employees`);
   }
+
+  public getSolicitudesCitas(){
+    return this.httpClient.get(`${baseUrl}/usuarios/lista-solicitudes`)
+  }
 }
