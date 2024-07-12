@@ -1,7 +1,7 @@
 <section class="container">
     <h1>Solicitar cita en Óptica Luz</h1>
 
-    <form [formGroup]="citaForm" class="citaForm">
+    <form [formGroup]="citaForm" class="citaForm" (ngSubmit)="onSubmit()">
         <section class="data">
             <section>
                 <div class="form-group">
@@ -11,7 +11,7 @@
 
                 <div class="form-group">
                     <label for="hora">Hora de la cita:</label>
-                    <input type="time" class="form-control" id="hora" required>
+                    <input type="time" class="form-control" id="hora" formControlName="hora" required>
                 </div>
             </section>
 
@@ -29,8 +29,8 @@
 
                 <div class="form-group">
                     <label for="observaciones">Observaciones (opcional):</label>
-                    <textarea class="form-control" id="observaciones" formControlName="observaciones"
-                        rows="3"></textarea>
+                    <textarea class="form-control" id="observaciones" formControlName="observacion"
+                        rows="1"></textarea>
                 </div>
             </section>
         </section>

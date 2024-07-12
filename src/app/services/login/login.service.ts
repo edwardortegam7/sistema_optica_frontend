@@ -53,6 +53,11 @@ export class LoginService {
     return user ? user.authorities[0].authority : '';
   }
 
+  public getUserId() {
+    let user = this.getUser();
+    return user? user.id : null;
+  }
+
   public getCurrentUser() {
     return this.http.get(`${baseUrl}/actual-usuario`);
   }
