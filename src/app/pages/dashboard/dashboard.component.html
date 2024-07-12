@@ -1,4 +1,4 @@
-<div>
+<section>
     <div class="title">
         <img src="../../../assets/imagenes/logo.png" alt="">
         <div class="welcome">
@@ -11,4 +11,18 @@
         </div>
     </div>
     <br>
-</div>
+</section>
+<section *ngIf="role === ''" class="container">
+
+    <div class="contenedor-botones">
+        <a class="boton boton-solicitar" [routerLink]="'/solicitar-cita'">
+            Solicitar cita
+            <i class="fa-solid fa-bookmark"></i>
+        </a>
+        <a class="boton boton-ver">
+            Ver citas
+            <i class="fa-solid fa-calendar-days"></i>
+        </a>
+    </div>
+
+</section>

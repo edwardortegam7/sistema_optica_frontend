@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
         this.loginService.getCurrentUser().subscribe((user: any) => {
           this.loginService.setUser(user);
           console.log(user);
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['']);
           this.loginService.loginStatusSubjec.next(true);
 /*
           if (this.loginService.getUserRole()) {

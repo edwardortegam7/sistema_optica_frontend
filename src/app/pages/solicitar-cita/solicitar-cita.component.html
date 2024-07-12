@@ -1,0 +1,40 @@
+<section class="container">
+    <h1>Solicitar cita en Óptica Luz</h1>
+
+    <form [formGroup]="citaForm" class="citaForm" (ngSubmit)="onSubmit()">
+        <section class="data">
+            <section>
+                <div class="form-group">
+                    <label for="fecha">Fecha de la cita:</label>
+                    <input type="date" class="form-control" id="fecha" formControlName="fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora">Hora de la cita:</label>
+                    <input type="time" class="form-control" id="hora" formControlName="hora" required>
+                </div>
+            </section>
+
+            <section>
+                <div class="form-group">
+                    <label for="servicio">Servicio deseado:</label>
+                    <select class="form-control" id="servicio" formControlName="servicio" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="examen-vista">Examen de la vista</option>
+                        <option value="adaptacion-lentes">Adaptación de lentes</option>
+                        <option value="reparacion-lentes">Reparación de lentes</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="observaciones">Observaciones (opcional):</label>
+                    <textarea class="form-control" id="observaciones" formControlName="observacion"
+                        rows="1"></textarea>
+                </div>
+            </section>
+        </section>
+
+        <button type="submit" class="btn btn-primary" [disabled]="citaForm.invalid">Solicitar cita</button>
+    </form>
+</section>

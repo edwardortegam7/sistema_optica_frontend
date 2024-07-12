@@ -3,11 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
-import { AdminGuard } from './services/admin.guard';
-import { NormalGuard } from './services/normal.guard';
 import { SelectRolComponent } from './pages/select-rol/select-rol.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TableEmployeesComponent } from './pages/table-employees/table-employees.component';
+import { SolicitarCitaComponent } from './pages/solicitar-cita/solicitar-cita.component';
 
 
 const routes: Routes = [
@@ -40,6 +39,11 @@ const routes: Routes = [
     path: 'table-employees',
     component: TableEmployeesComponent,
     pathMatch:'full',
+  },
+  {
+    path: 'solicitar-cita',
+    component: SolicitarCitaComponent,
+    pathMatch: 'full',
   }
 ];
 

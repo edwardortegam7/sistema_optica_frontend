@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { ClientService } from '../../services/client/client.service';
 
 @Component({
   selector: 'app-signup',
@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
     direccion:'',
   };
 
-  constructor(private userService: UserService, private snack: MatSnackBar, private router: Router) {}
+  constructor(private clientService:ClientService, private snack: MatSnackBar, private router: Router) {}
   ngOnInit(): void {
   }
   formSubmit() {
@@ -98,7 +98,7 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    this.userService.añadirCliente(this.user).subscribe(
+    this.clientService.añadirCliente(this.user).subscribe(
       (data) => {
         console.log(data);
         Swal.fire(
