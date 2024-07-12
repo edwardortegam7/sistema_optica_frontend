@@ -19,6 +19,7 @@ export class SolicitudesCitasComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getSolicitudesCitas().subscribe((data) => {
+        this.solicitudes = data
         console.log(this.solicitudes);
       });
   }
