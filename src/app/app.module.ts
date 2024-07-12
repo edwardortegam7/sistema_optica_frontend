@@ -35,6 +35,7 @@ import { UserService } from './services/user/user.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SolicitarCitaComponent } from './pages/solicitar-cita/solicitar-cita.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes-citas.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     TableEmployeesComponent,
     SolicitarCitaComponent,
+    SolicitudesCitasComponent,
   ],
   imports: [
     BrowserModule,
