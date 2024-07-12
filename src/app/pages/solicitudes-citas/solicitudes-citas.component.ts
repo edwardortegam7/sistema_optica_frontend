@@ -1,29 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user/user.service';
 
-interface DataItem {
-  nombre: string;
-  apellido: string;
-  telefono: string;
-  correo: string;
-  fecha: string;
-  hora: string;
-  servicio: string;
-}
 
 @Component({
   selector: 'app-solicitudes-citas',
   templateUrl: './solicitudes-citas.component.html',
-  styleUrl: './solicitudes-citas.component.css'
+  styleUrl: './solicitudes-citas.component.css',
 })
 export class SolicitudesCitasComponent implements OnInit {
-  
   servicioFilter: string = '';
-  data: DataItem[] = [];
 
-  sortColumn: string = 'nombre'; 
+  solicitudes: any;
+
+  sortColumn: string = 'nombre';
   sortDirection: number = 1;
 
-  ngOnInit(): void {}
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.userService.getSolicitudesCitas().subscribe((data) => {
+        console.log(this.solicitudes);
+      });
+  }
 
   onHeaderClick(columnName: string) {
     if (this.sortColumn === columnName) {
@@ -34,9 +32,7 @@ export class SolicitudesCitasComponent implements OnInit {
     }
   }
 
-  applyFilter() {
-
-    this.data = this.data.filter(item => item.servicio === this.servicioFilter || this.servicioFilter === '');
-  }
-
+  // applyFilter() {
+  //   this.solicitudes = this.solicitudes.filter(item => item.servicio === this.servicioFilter || this.servicioFilter === '');
+  // }
 }
