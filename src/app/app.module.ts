@@ -36,6 +36,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SolicitarCitaComponent } from './pages/solicitar-cita/solicitar-cita.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes-citas.component';
+import { PagarCitaComponent } from './pages/pagar-cita/pagar-cita.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes
     TableEmployeesComponent,
     SolicitarCitaComponent,
     SolicitudesCitasComponent,
+    PagarCitaComponent,
   ],
   imports: [
     BrowserModule,

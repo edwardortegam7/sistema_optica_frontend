@@ -16,4 +16,9 @@ export class ClientService {
   public solicitarCita(clienteId: number, cita: any) {
     return this.httpClient.post(`${baseUrl}/clientes/guardar-cita/${clienteId}`, cita);
   }
+
+  public realizarPago(clienteId: number, datosPago: any) {
+    
+  }
+  
 }
