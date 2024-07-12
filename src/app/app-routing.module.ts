@@ -51,6 +51,11 @@ const routes: Routes = [
     component: SolicitudesCitasComponent,
     pathMatch: 'full',
   }
+  {
+    path: 'pagar-cita',
+    component: PagarCitaComponent,
+    pathMatch: 'full',
+  }
 ];
 
 @NgModule({
