@@ -10,8 +10,8 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public añadirUsuario(user:any){
-    return this.httpClient.post(`${baseUrl}/usuarios/`, user);
+  public añadirUsuario(nombreRol: string, user:any){
+    return this.httpClient.post(`${baseUrl}/usuarios/${nombreRol}`, user);
   }
 
   public getCredentials(employee:any) {
@@ -24,5 +24,9 @@ export class UserService {
 
   public getSolicitudesCitas(){
     return this.httpClient.get(`${baseUrl}/usuarios/lista-solicitudes`)
+  }
+
+  public checkEmailAvailable(username: string){
+    return this.httpClient.get<boolean>(`${baseUrl}/usuarios/check-email?username=${username}`)
   }
 }

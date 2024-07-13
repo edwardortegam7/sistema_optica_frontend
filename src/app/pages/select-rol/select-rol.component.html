@@ -8,12 +8,12 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Dni">
+                        <input matInput placeholder="Dni" name="dni" [(ngModel)]="user.dni">
                     </mat-form-field>
                 </td>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <mat-select placeholder="Género" name="genero">
+                        <mat-select placeholder="Género" name="genero" [(ngModel)]="user.genero">
                             <mat-option value="Masculino">Masculino</mat-option>
                             <mat-option value="Femenino">Femenino</mat-option>
                         </mat-select>
@@ -26,12 +26,12 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Nombre">
+                        <input matInput placeholder="Nombre" name="nombres" [(ngModel)]="user.nombres">
                     </mat-form-field>
                 </td>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Apellidos">
+                        <input matInput placeholder="Apellidos" name="apellidos" [(ngModel)]="user.apellidos">
                     </mat-form-field>
                 </td>
             </tr>
@@ -41,12 +41,12 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Teléfono">
+                        <input matInput placeholder="Teléfono" name="telefono" [(ngModel)]="user.telefono">
                     </mat-form-field>
                 </td>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Edad">
+                        <input matInput placeholder="Dirección" name="direccion" [(ngModel)]="user.direccion">
                     </mat-form-field>
                 </td>
             </tr>
@@ -55,31 +55,33 @@
         <table class="example-full-width" cellspacing="0">
             <tr>
                 <td>
+                    <mat-label>Fecha de nacimiento</mat-label>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Dirección">
+                        <input required name="fecha_nacimiento" matInput type="date" [(ngModel)]="user.fecha_nacimiento">
                     </mat-form-field>
                 </td>
             </tr>
         </table>
-        <mat-label>Fecha de nacimiento</mat-label>
-        <mat-form-field class="example-full-width">
-            <input required name="fechaNacimiento" matInput type="date">
-        </mat-form-field>
+
 
         <h1>Seleccione el Tipo de Empleado</h1>
         <div class="button-container">
-            <a href="registro_administrativo.html" class="employee-button">
+            <button type="button" (click)="onClick('Administrativo')" class="employee-button">
                 <i class="fas fa-user-tie"></i>
                 <span>Administrativo</span>
-            </a>
-            <a href="registro_vendedor.html" class="employee-button">
+            </button>
+            <button type="button" (click)="onClick('Vendedor')" class="employee-button">
                 <i class="fas fa-user-tag"></i>
                 <span>Vendedor</span>
-            </a>
-            <a href="registro_doctor.html" class="employee-button">
+            </button>
+            <button type="button" (click)="onClick('Doctor')" class="employee-button">
                 <i class="fas fa-user-md"></i>
                 <span>Doctor</span>
-            </a>
+            </button>
+        </div>
+
+        <div class="button-submit">
+            <button type="submit" class="btn btn-primary">Solicitar cita</button>
         </div>
     </form>
 </section>
