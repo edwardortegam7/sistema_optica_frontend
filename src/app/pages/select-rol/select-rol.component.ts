@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-select-rol',
   templateUrl: './select-rol.component.html',
-  styleUrl: './select-rol.component.css'
+  styleUrl: './select-rol.component.css',
 })
 export class SelectRolComponent implements OnInit {
   public user = {
@@ -15,38 +15,24 @@ export class SelectRolComponent implements OnInit {
     password: '',
     nombres: '',
     apellidos: '',
-    dni:'',
-    genero:'',
+    dni: '',
+    genero: '',
     telefono: '',
-    direccion:'',
+    direccion: '',
     fecha_nacimiento: '',
-  }
+  };
 
-  constructor(private userService: UserService, private snack: MatSnackBar, private router: Router){};
+  public nombreRol: string = '';
 
-  ngOnInit(): void {
-  }
+  constructor(
+    private userService: UserService,
+    private snack: MatSnackBar,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {}
 
   formSubmit() {
-    console.log(this.user);
-    if (!this.user.username) {
-      this.snack.open('El nombre de usuario es requerido!!', 'Aceptar', {
-        duration: 3000,
-        verticalPosition: 'top',
-        horizontalPosition: 'right',
-      });
-      return;
-    }
-
-    if (!this.user.password) {
-      this.snack.open('La contraseña es requerida!!', 'Aceptar', {
-        duration: 3000,
-        verticalPosition: 'top',
-        horizontalPosition: 'right',
-      });
-      return;
-    }
-
     if (!this.user.nombres) {
       this.snack.open('Los nombres son requeridos!!', 'Aceptar', {
         duration: 3000,
@@ -75,11 +61,15 @@ export class SelectRolComponent implements OnInit {
     }
 
     if (!this.isValidPhoneNumber(this.user.telefono)) {
-      this.snack.open('El teléfono debe tener exactamente 9 dígitos.', 'Aceptar', {
-        duration: 3000,
-        verticalPosition: 'top',
-        horizontalPosition: 'right',
-      });
+      this.snack.open(
+        'El teléfono debe tener exactamente 9 dígitos.',
+        'Aceptar',
+        {
+          duration: 3000,
+          verticalPosition: 'top',
+          horizontalPosition: 'right',
+        }
+      );
       return;
     }
 
@@ -92,31 +82,63 @@ export class SelectRolComponent implements OnInit {
       return;
     }
 
-    this.userService.añadirUsuario(this.user).subscribe(
-      (data) => {
-        console.log(data);
-        Swal.fire(
-          'Usuario guardado',
-          'Usuario registrado con exito',
-          'success'
-        );
-        this.router.navigate(['login']);
+    this.userService
+      .checkEmailAvailable(this.formatUsername())
+      .subscribe((isAvailable) => {
+        let email = this.formatUsername();
+        let counter = 1;
 
-      },
-      (error) => {
-        console.log(error);
-        this.snack.open('Ha ocurrido un error en el sistema', 'Aceptar', {
-          duration: 3000,
-        });
-      }
-    );
+        while (!isAvailable) {
+          email = `${this.formatUsername()}${counter++}@opticayara.com`;
+          this.userService.checkEmailAvailable(email).subscribe((available) => {
+            isAvailable = available;
+          });
+        }
+
+        let password = this.formatPassword();
+        this.user.username = email;
+        this.user.password = password;
+        
+        this.userService.añadirUsuario(this.nombreRol,this.user).subscribe(
+          (data) => {
+            console.log(data);
+            Swal.fire(
+              'Usuario guardado',
+              `Email: ${this.user.username} Contraseña: ${this.user.password}`,
+              'success'
+            );
+            this.router.navigate(['']);
+          },
+          (error) => {
+            console.log(error);
+            this.snack.open('Ha ocurrido un error en el sistema', 'Aceptar', {
+              duration: 3000,
+            });
+          }
+        );
+      });
   }
 
   isValidPhoneNumber(phone: string): boolean {
     return /^\d{9}$/.test(phone); // Verifica que el teléfono tenga exactamente 9 dígitos
   }
-  
+
   isValidDNI(dni: string): boolean {
     return /^\d{8}$/.test(dni); // Verifica que el DNI tenga exactamente 8 dígitos
   }
-};
+
+  onClick(nombreRol: string): void {
+    this.nombreRol = nombreRol;
+  }
+
+  formatUsername(): string {
+    const name = this.user.nombres.split(' ')[0].toLocaleLowerCase();
+    const surname = this.user.apellidos.split(' ')[0].toLowerCase();
+    return name + '.' + surname + '@opticayara.com';
+  }
+
+  formatPassword(): string {
+    const surname = this.user.apellidos.split(' ')[0].toLowerCase();
+    return this.user.dni + surname;
+  }
+}

@@ -50,7 +50,7 @@ const routes: Routes = [
     path: 'solicitudes-citas',
     component: SolicitudesCitasComponent,
     pathMatch: 'full',
-  }
+  },
   {
     path: 'pagar-cita',
     component: PagarCitaComponent,
