@@ -21,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let solicitud of solicitudes">
+      <tr (Click)="onCLick()" class="requestRow" *ngFor="let solicitud of solicitudes">
         <td>{{ solicitud[0] }}</td>
         <td>{{ solicitud[1] }}</td>
         <td>{{ solicitud[2] }}</td>

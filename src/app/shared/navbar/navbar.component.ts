@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,9 +11,9 @@ export class NavbarComponent implements OnInit {
   isLoggedIn = false;
   userRole: string = '';
   user: any = null;
-  opened = false; // Controla el estado del mat-sidenav
+  opened = true; // Controla el estado del mat-sidenav
 
-  constructor(public login: LoginService) {
+  constructor(public login: LoginService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -21,7 +22,6 @@ export class NavbarComponent implements OnInit {
     this.userRole = this.login.getUserRole();
     
     // Inicialización de opened basado en isLoggedIn
-    this.opened = this.isLoggedIn; // Abierto si no está logueado, cerrado si está logueado
     
     // Suscripción al cambio de estado de login
     this.login.loginStatusSubjec.asObservable().subscribe(
@@ -30,7 +30,6 @@ export class NavbarComponent implements OnInit {
         this.user = this.login.getUser();
         this.userRole = this.login.getUserRole();
         // Actualización de opened basado en isLoggedIn
-        this.opened = this.isLoggedIn; // Abierto si no está logueado, cerrado si está logueado
       }
     );
   }
@@ -38,6 +37,6 @@ export class NavbarComponent implements OnInit {
   public logout() {
     this.login.logout();
     //window.location.reload(); // Recargar la página al cerrar sesión
-    window.location.href = '/';
+    this.router.navigate(['']);
   }
 }

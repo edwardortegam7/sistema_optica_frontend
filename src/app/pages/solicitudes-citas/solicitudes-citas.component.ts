@@ -36,4 +36,10 @@ export class SolicitudesCitasComponent implements OnInit {
   // applyFilter() {
   //   this.solicitudes = this.solicitudes.filter(item => item.servicio === this.servicioFilter || this.servicioFilter === '');
   // }
+
+  onCLick() {
+    return null;
+  }
+
+  
 }
