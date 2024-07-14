@@ -21,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let solicitud of solicitudes">
+      <tr class="requestRow" *ngFor="let solicitud of solicitudes" (click)="openModal(solicitud)">
         <td>{{ solicitud[0] }}</td>
         <td>{{ solicitud[1] }}</td>
         <td>{{ solicitud[2] }}</td>
@@ -32,4 +32,9 @@
       </tr>
     </tbody>
   </table>
+  <div *ngIf="this.modalSwitcher">
+    <app-assigned-doctor></app-assigned-doctor>
+  </div>
 </div>
+
+

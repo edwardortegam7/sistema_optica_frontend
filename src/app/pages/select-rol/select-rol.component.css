@@ -1,84 +1,83 @@
  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+     font-family: Arial, sans-serif;
+     background-color: #f4f4f4;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+ }
 
-.container {
-    text-align: center;
-}
+ .container {
+     text-align: center;
+ }
 
-h1 {
-    margin-bottom: 20px;
-}
+ h1 {
+     margin-bottom: 20px;
+ }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+ .button-container {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+ }
 
-.employee-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    width: 150px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+ .employee-button {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-decoration: none;
+     color: #333;
+     background-color: #fff;
+     border: 1px solid #ddd;
+     border-radius: 10px;
+     padding: 20px;
+     width: 150px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s, box-shadow 0.3s;
+ }
 
-.employee-button i {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
+ .employee-button i {
+     font-size: 2em;
+     margin-bottom: 10px;
+ }
 
-.employee-button span {
-    font-size: 1.2em;
-}
+ .employee-button span {
+     font-size: 1.2em;
+ }
 
-.employee-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+ .employee-button:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+ }
 
-.employee-button:focus {
-    border: solid 1px blue;
-}
+ .employee-button:focus {
+     border: solid 1px blue;
+ }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-}
+ section {
+     padding: 20px;
+     margin: 20px;
+     background-color: #f4f4f4;
+     display: flex;
+     justify-content: center;
+ }
 
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
+ .example-form {
+     min-width: 150px;
+     max-width: 500px;
+ }
 
-  .button-submit {
-    padding: 1.5rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-  td {
-    padding-right: 8px;
-  }
-  
+ .example-full-width {
+     width: 100%;
+ }
+
+ .button-submit {
+     padding: 1.5rem;
+     display: flex;
+     justify-content: center;
+ }
+
+ td {
+     padding-right: 8px;
+ }

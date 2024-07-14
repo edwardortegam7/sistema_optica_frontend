@@ -78,7 +78,10 @@ export class TableEmployeesDataSource extends DataSource<TableEmployeesItem> {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
         case 'name': return compare(a.name, b.name, isAsc);
-        case 'dni': return compare(+a.dni, +b.dni, isAsc);
+        case 'dni': return compare(a.dni, b.dni, isAsc);
+        case 'lastname': return compare(a.lastname, b.lastname, isAsc);
+        case 'phone': return compare(a.phone, b.phone, isAsc);
+        case 'rol': return compare(a.rol, b.rol, isAsc);
         default: return 0;
       }
     });

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user/user.service';
+import { AssignedDoctorService } from '../../services/modal/assignedDoctor/assigned-doctor.service';
 
 
 @Component({
@@ -9,18 +10,21 @@ import { UserService } from '../../services/user/user.service';
 })
 export class SolicitudesCitasComponent implements OnInit {
   servicioFilter: string = '';
-
+  modalSwitcher: boolean = false;
   solicitudes: any;
+  selectedSolicitud: any;
 
   sortColumn: string = 'nombre';
   sortDirection: number = 1;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private modal: AssignedDoctorService) {}
 
   ngOnInit(): void {
+    this.modal.$modal.subscribe((valor)=>{
+      this.modalSwitcher = valor;
+    })
     this.userService.getSolicitudesCitas().subscribe((data) => {
         this.solicitudes = data
-        console.log(this.solicitudes);
       });
   }
 
@@ -36,4 +40,13 @@ export class SolicitudesCitasComponent implements OnInit {
   // applyFilter() {
   //   this.solicitudes = this.solicitudes.filter(item => item.servicio === this.servicioFilter || this.servicioFilter === '');
   // }
+
+  openModal(solicitud: any) {
+    this.modalSwitcher = true;
+    this.selectedSolicitud = solicitud;
+    this.modalSwitcher = true;
+    this.modal.setSolicitud(solicitud);
+  }
+
+  
 }
