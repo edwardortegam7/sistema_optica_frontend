@@ -37,6 +37,7 @@ import { SolicitarCitaComponent } from './pages/solicitar-cita/solicitar-cita.co
 import { ReactiveFormsModule } from '@angular/forms';
 import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes-citas.component';
 import { PagarCitaComponent } from './pages/pagar-cita/pagar-cita.component';
+import { AssignedDoctorComponent } from './modals/assigned-doctor/assigned-doctor.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { PagarCitaComponent } from './pages/pagar-cita/pagar-cita.component';
     SolicitarCitaComponent,
     SolicitudesCitasComponent,
     PagarCitaComponent,
+    AssignedDoctorComponent,
   ],
   imports: [
     BrowserModule,
