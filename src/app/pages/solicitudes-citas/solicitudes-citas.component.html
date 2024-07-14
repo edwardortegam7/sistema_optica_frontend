@@ -21,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr (click)="openModal()" class="requestRow" *ngFor="let solicitud of solicitudes">
+      <tr class="requestRow" *ngFor="let solicitud of solicitudes" (click)="openModal(solicitud)">
         <td>{{ solicitud[0] }}</td>
         <td>{{ solicitud[1] }}</td>
         <td>{{ solicitud[2] }}</td>

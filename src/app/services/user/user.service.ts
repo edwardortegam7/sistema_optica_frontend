@@ -26,6 +26,10 @@ export class UserService {
     return this.httpClient.get(`${baseUrl}/usuarios/lista-solicitudes`)
   }
 
+  public getSolicitud(id:number) {
+    return this.httpClient.get(`${baseUrl}/usuarios/solicitud/${id}`)
+  }
+
   public checkEmailAvailable(username: string){
     return this.httpClient.get<boolean>(`${baseUrl}/usuarios/check-email?username=${username}`)
   }

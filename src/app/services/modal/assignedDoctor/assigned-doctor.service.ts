@@ -7,5 +7,14 @@ export class AssignedDoctorService {
 
   constructor() { }
 
-  $modal = new EventEmitter<any>();
+  $modal = new EventEmitter<boolean>();
+  private solicitud: any;
+
+  setSolicitud(solicitud: any) {
+    this.solicitud = solicitud;
+  }
+
+  getSolicitud() {
+    return this.solicitud;
+  }
 }

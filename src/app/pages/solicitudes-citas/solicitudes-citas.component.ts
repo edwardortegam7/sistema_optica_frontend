@@ -12,6 +12,7 @@ export class SolicitudesCitasComponent implements OnInit {
   servicioFilter: string = '';
   modalSwitcher: boolean = false;
   solicitudes: any;
+  selectedSolicitud: any;
 
   sortColumn: string = 'nombre';
   sortDirection: number = 1;
@@ -40,8 +41,11 @@ export class SolicitudesCitasComponent implements OnInit {
   //   this.solicitudes = this.solicitudes.filter(item => item.servicio === this.servicioFilter || this.servicioFilter === '');
   // }
 
-  openModal() {
+  openModal(solicitud: any) {
     this.modalSwitcher = true;
+    this.selectedSolicitud = solicitud;
+    this.modalSwitcher = true;
+    this.modal.setSolicitud(solicitud);
   }
 
   

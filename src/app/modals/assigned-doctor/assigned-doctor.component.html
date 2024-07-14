@@ -1,8 +1,8 @@
 <div class="modal">
     <div class="modal_body">
-        <button (click)="closeModal()">
-            <div>x</div>
-        </button>
-        <h3>Cita agendada</h3>
+        <button class="close" (click)="closeModal()">&times;</button>
+        <p>Nombre: {{ info[0] }}</p>
+        <p>Servicio: {{ info[1] }}</p>
+        <p>Fecha: {{ info[2] }}</p>
     </div>
 </div>
