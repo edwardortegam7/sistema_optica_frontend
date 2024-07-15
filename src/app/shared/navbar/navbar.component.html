@@ -36,7 +36,7 @@
       <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRADOR'" [routerLink]="'/selected-role'" (click)="opened = !opened">Agregar Empleado</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === 'ADMINISTRADOR'" [routerLink]="'/table-employees'" (click)="opened = !opened">Listar empleados</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === 'Administrativo'" [routerLink]="'/solicitudes-citas'" (click)="opened = !opened">Solicitudes</a>
-      <a mat-list-item *ngIf="isLoggedIn && userRole === 'Administrativo'" [routerLink]="'/dashboard'" (click)="opened = !opened">Registro</a>
+      <a mat-list-item *ngIf="isLoggedIn && userRole === 'Administrativo'" [routerLink]="'/citas-asignadas'" (click)="opened = !opened">Registro</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === ''" [routerLink]="'/solicitar-cita'" (click)="opened = !opened">Solicitar cita</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === ''" [routerLink]="'/dashboard'" (click)="opened = !opened">Ver Productos</a>
       <!-- Añade más opciones según el rol del usuario -->

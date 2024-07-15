@@ -1,8 +1,46 @@
 <div class="modal">
-    <div class="modal_body">
-        <button class="close" (click)="closeModal()">&times;</button>
-        <p>Nombre: {{ info[0] }}</p>
-        <p>Servicio: {{ info[1] }}</p>
-        <p>Fecha: {{ info[2] }}</p>
-    </div>
+    <section class="modal_body">
+        <div>
+            <button class="close" (click)="closeModal()">&times;</button>
+            <div class="data">
+                <div class="data-user">
+                    <h3> Datos del cliente</h3>
+                    <span>
+                        <p>nombre:</p> {{ user?.nombres }}
+                    </span>
+                    <span>
+                        <p>apellido:</p> {{ user?.apellidos }}
+                    </span>
+                </div>
+                <div class="data-cita">
+                    <h3>Datos de la cita</h3>
+                    <span>
+                        <p>servicio:</p> {{ cita?.servicio }}
+                    </span>
+                    <span>
+                        <p>fecha:</p> {{ cita?.fecha }}
+                    </span>
+                    <span>
+                        <p>hora:</p> {{ cita?.hora }}
+                    </span>
+                    <span>
+                        <p>observacion:</p> {{ cita?.observacion }}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4>Asignar doctor</h4>
+            <mat-form-field>
+                <mat-select [(ngModel)]="selectedDoctorId">
+                    <mat-option *ngFor="let doctor of doctores" [value]="doctor.id">
+                        {{doctor.nombres}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="button">
+            <button (click)="asignarCitaDoctor()"> Registrar </button>
+        </div>
+    </section>
 </div>
