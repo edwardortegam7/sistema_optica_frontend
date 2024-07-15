@@ -9,6 +9,7 @@ import { TableEmployeesComponent } from './pages/table-employees/table-employees
 import { SolicitarCitaComponent } from './pages/solicitar-cita/solicitar-cita.component';
 import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes-citas.component';
 import { PagarCitaComponent } from './pages/pagar-cita/pagar-cita.component';
+import { CitasAsignadasComponent } from './pages/citas-asignadas/citas-asignadas.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,11 @@ const routes: Routes = [
   {
     path: 'pagar-cita',
     component: PagarCitaComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'citas-asignadas',
+    component: CitasAsignadasComponent,
     pathMatch: 'full',
   }
 ];

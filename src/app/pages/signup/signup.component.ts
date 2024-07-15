@@ -100,7 +100,6 @@ export class SignupComponent implements OnInit {
 
     this.clientService.añadirCliente(this.user).subscribe(
       (data) => {
-        console.log(data);
         Swal.fire(
           'Usuario guardado',
           'Usuario registrado con exito',

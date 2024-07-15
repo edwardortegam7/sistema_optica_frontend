@@ -30,7 +30,6 @@ export class TableEmployeesComponent implements AfterViewInit, OnInit {
 
   ngOnInit(): void {
     this.userService.getEmployees().subscribe((data: TableEmployeesItem[]) => {
-      console.log(data);
       const employee = data.map((employee: any) => {
         return {
           dni: employee.dni,
