@@ -27,7 +27,19 @@ export class CitasAsignadasComponent implements AfterViewInit, OnInit {
 
   ngOnInit(): void {
     this.userService.getCitasAsignadas().subscribe((data: CitasAsignadasItem[]) => {
-      console.log(data);
+      const assigned = data.map((assigned: any) => {
+        return {
+          nombres: assigned.nombres,
+          apellidos: assigned.apellidos,
+          fecha: assigned.fecha,
+          hora: assigned.hora,
+          nomDoctor: assigned.nomDoctor,
+          apeDoctor: assigned.apeDoctor,
+        }
+      });
+      this.dataSource.data = assigned;
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
     });  // TODO: send request to backend to fetch data
       
   }

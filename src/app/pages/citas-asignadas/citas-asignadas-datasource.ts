@@ -8,8 +8,8 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface CitasAsignadasItem {
   nombres: string;
   apellidos: string;
-  fecha: Date;
-  hora: Date;
+  fecha: string;
+  hora: string;
   nomDoctor: string;
   apeDoctor: string;
 }
