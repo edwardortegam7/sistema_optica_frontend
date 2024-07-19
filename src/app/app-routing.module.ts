@@ -10,6 +10,9 @@ import { SolicitarCitaComponent } from './pages/solicitar-cita/solicitar-cita.co
 import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes-citas.component';
 import { PagarCitaComponent } from './pages/pagar-cita/pagar-cita.component';
 import { CitasAsignadasComponent } from './pages/citas-asignadas/citas-asignadas.component';
+import { AgregarProductoComponent } from './pages/agregar-producto/agregar-producto.component';
+import { ModificarProductoComponent } from './pages/modificar-producto/modificar-producto.component';
+import { TableInventarioComponent } from './pages/table-inventario/table-inventario.component';
 
 const routes: Routes = [
   {
@@ -61,7 +64,22 @@ const routes: Routes = [
     path: 'citas-asignadas',
     component: CitasAsignadasComponent,
     pathMatch: 'full',
-  }
+  },
+  {
+    path: 'table-inventario',
+    component: TableInventarioComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'agregar-producto',
+    component: AgregarProductoComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'modificar-producto/:id',
+    component: ModificarProductoComponent,
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,37 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Crear inventario</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Categoria</label>
+        <input type="text" id="categoria" 
+          class="form-control" 
+          [(ngModel)]="producto.categoria" name="categoria">
+      </div>
+      <div class="form-group">
+        <label>Descripción</label>
+        <input type="text" id="descripcion" 
+          class="form-control" 
+          [(ngModel)]="producto.descripcion" name="descripcion">
+      </div>
+      <div class="form-group">
+        <label>Precio de Venta</label>
+        <input type="text" id="precioVenta" 
+          class="form-control" 
+          [(ngModel)]="producto.precioVenta" name="precioVenta">
+      </div>
+      <div class="form-group">
+        <label>Precio de Compra</label>
+        <input type="text" id="precioCompra" 
+          class="form-control" 
+          [(ngModel)]="producto.precioCompra" name="precioCompra">
+      </div>
+      <div class="form-group">
+        <label>Stock</label>
+        <input type="text" id="stock" 
+          class="form-control" 
+          [(ngModel)]="producto.stock" name="stock">
+      </div>
+      <button class="btn btn-success">Guardar</button>
+    </form>
+  </div>
+  

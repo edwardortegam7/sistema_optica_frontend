@@ -1,0 +1,35 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Modificar Producto</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label>Id</label>
+          <input type="text" id="id" class="form-control" [(ngModel)]="producto.id" name="id" readonly>
+      </div>
+      <div class="form-group">
+        <label>Categoría</label>
+        <input type="text" id="categoria" class="form-control" [(ngModel)]="producto.categoria" name="categoria">
+      </div>
+      <div class="form-group">
+        <label>Descripción</label>
+        <input type="text" id="descripcion" class="form-control" [(ngModel)]="producto.descripcion" name="descripcion">
+      </div>
+      <div class="form-group">
+        <label>Precio de Venta</label>
+        <input type="text" id="precioVenta" class="form-control" [(ngModel)]="producto.precioVenta" name="precioVenta">
+      </div>
+      <div class="form-group">
+        <label>Precio de Compra</label>
+        <input type="text" id="precioCompra" class="form-control" [(ngModel)]="producto.precioCompra" name="precioCompra">
+      </div>
+      <div class="form-group">
+          <label>Utlidad</label>
+          <input type="text" id="utilidad" class="form-control" [(ngModel)]="producto.utilidad" name="utilidad" readonly>
+      </div>
+      <div class="form-group">
+        <label>Stock</label>
+        <input type="text" id="stock" class="form-control" [(ngModel)]="producto.stock" name="stock">
+      </div>
+      <button type="submit" class="btn btn-success">Guardar cambios</button>
+    </form>
+  </div>
+  

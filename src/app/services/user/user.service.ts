@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import baseUrl from '../helper';
 import { Observable } from 'rxjs';
+import { TableInventarioItem } from '../../pages/table-inventario/table-inventario-datasource';
 
 @Injectable({
   providedIn: 'root',
@@ -52,5 +53,24 @@ export class UserService {
 
   public getCitasAsignadas(): Observable<any> {
     return this.httpClient.get(`${baseUrl}/usuarios/citas-asignadas`);
+  }
+  public getInventario(): Observable<TableInventarioItem[]> {
+    return this.httpClient.get<TableInventarioItem[]>(`${baseUrl}/usuarios/inventario`);
+  }
+
+  public getInventarioPorId(id:number){
+    return this.httpClient.get(`${baseUrl}/usuarios/inventario/${id}`);
+  }
+
+  public agregarProducto(producto: any){
+    return this.httpClient.post(`${baseUrl}/usuarios/inventario`, producto);
+  }
+
+  public modificarProducto(id:number, producto:any){
+    return this.httpClient.put(`${baseUrl}/usuarios/inventario/${id}`,producto)
+  }
+
+  public eliminarProducto(id:number){
+    return this.httpClient.delete(`${baseUrl}/usuarios/inventario/${id}`);
   }
 }

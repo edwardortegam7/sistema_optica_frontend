@@ -39,6 +39,9 @@ import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes
 import { PagarCitaComponent } from './pages/pagar-cita/pagar-cita.component';
 import { AssignedDoctorComponent } from './modals/assigned-doctor/assigned-doctor.component';
 import { CitasAsignadasComponent } from './pages/citas-asignadas/citas-asignadas.component';
+import { TableInventarioComponent } from './pages/table-inventario/table-inventario.component';
+import { AgregarProductoComponent } from './pages/agregar-producto/agregar-producto.component';
+import { ModificarProductoComponent } from './pages/modificar-producto/modificar-producto.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,9 @@ import { CitasAsignadasComponent } from './pages/citas-asignadas/citas-asignadas
     PagarCitaComponent,
     AssignedDoctorComponent,
     CitasAsignadasComponent,
+    TableInventarioComponent,
+    AgregarProductoComponent,
+    ModificarProductoComponent,
   ],
   imports: [
     BrowserModule,
