@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import baseUrl from '../helper';
 import { Observable } from 'rxjs';
 import { TableInventarioItem } from '../../pages/table-inventario/table-inventario-datasource';
+import { TableVentaItem } from '../../pages/table-venta/table-venta-datasource';
 
 @Injectable({
   providedIn: 'root',
@@ -73,4 +74,14 @@ export class UserService {
   public eliminarProducto(id:number){
     return this.httpClient.delete(`${baseUrl}/usuarios/inventario/${id}`);
   }
+
+  //Ventas
+  public getVentas(): Observable<TableVentaItem[]> {
+    return this.httpClient.get<TableVentaItem[]>(`${baseUrl}/usuarios/ventas`);
+  }
+
+  public agregarVenta(venta: any){
+    return this.httpClient.post(`${baseUrl}/usuarios/ventas`, venta);
+  }
+
 }

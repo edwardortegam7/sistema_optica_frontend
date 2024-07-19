@@ -13,6 +13,8 @@ import { CitasAsignadasComponent } from './pages/citas-asignadas/citas-asignadas
 import { AgregarProductoComponent } from './pages/agregar-producto/agregar-producto.component';
 import { ModificarProductoComponent } from './pages/modificar-producto/modificar-producto.component';
 import { TableInventarioComponent } from './pages/table-inventario/table-inventario.component';
+import { TableVentaComponent } from './pages/table-venta/table-venta.component';
+import { RegistrarVentaComponent } from './pages/registrar-venta/registrar-venta.component';
 
 const routes: Routes = [
   {
@@ -78,6 +80,16 @@ const routes: Routes = [
   {
     path: 'modificar-producto/:id',
     component: ModificarProductoComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'table-venta',
+    component: TableVentaComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'registrar-venta',
+    component: RegistrarVentaComponent,
     pathMatch: 'full',
   },
 ];
