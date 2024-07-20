@@ -37,6 +37,10 @@ export class UserService {
     );
   }
 
+  public getClientes(): Observable<any[]>{
+    return this.httpClient.get<any[]>(`${baseUrl}/clientes/`);
+  }
+
   public getCliente(id: number) {
     return this.httpClient.get(`${baseUrl}/usuarios/get/${id}`);
   }
@@ -55,6 +59,9 @@ export class UserService {
   public getCitasAsignadas(): Observable<any> {
     return this.httpClient.get(`${baseUrl}/usuarios/citas-asignadas`);
   }
+
+  //Inventario
+
   public getInventario(): Observable<TableInventarioItem[]> {
     return this.httpClient.get<TableInventarioItem[]>(`${baseUrl}/usuarios/inventario`);
   }

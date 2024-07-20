@@ -1,37 +1,56 @@
 <div class="col-md-6 offset-md-3">
-    <h3 class="text-center">Registrar Venta</h3>
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label>Fecha</label>
-        <input type="text" id="fecha" 
-          class="form-control" 
-          [(ngModel)]="venta.fecha" name="fecha">
-      </div>
-      <div class="form-group">
-        <label>Cliente</label>
-        <input type="text" id="cliente" 
-          class="form-control" 
-          [(ngModel)]="venta.cliente" name="cliente">
-      </div>
-      <div class="form-group">
-        <label>Producto</label>
-        <input type="text" id="producto" 
-          class="form-control" 
-          [(ngModel)]="venta.producto" name="producto">
-      </div>
-      <div class="form-group">
-        <label>Monto</label>
-        <input type="text" id="monto" 
-          class="form-control" 
-          [(ngModel)]="venta.monto" name="monto">
-      </div>
-      <div class="form-group">
-        <label>Estado</label>
-        <input type="text" id="estado" 
-          class="form-control" 
-          [(ngModel)]="venta.estado" name="estado">
-      </div>
-      <button class="btn btn-success">Guardar</button>
-    </form>
-  </div>
-  
+  <h3 class="text-center">Registrar Venta</h3>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label>Fecha</label>
+      <input type="date" id="fecha" 
+        class="form-control" 
+        [(ngModel)]="venta.fecha" name="fecha">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label>Cliente</label>
+      <select id="cliente" 
+        class="form-control" 
+        [(ngModel)]="venta.cliente" name="cliente">
+        <option *ngFor="let cliente of clientes" [value]="cliente.id">
+          {{ cliente.nombres }} {{ cliente.apellidos }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label>Producto</label>
+      <select id="producto" 
+        class="form-control" 
+        [(ngModel)]="venta.producto" name="producto" (change)="onProductoChange($event)">
+        <option *ngFor="let producto of productos" [value]="producto.id">
+          {{ producto.descripcion }}
+        </option>
+      </select>
+    </div>
+
+
+
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label>Monto</label>
+      <input type="text" id="monto" 
+        class="form-control" 
+        [(ngModel)]="venta.monto" name="monto" readonly>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label>Estado</label>
+      <select id="estado" 
+        class="form-control" 
+        [(ngModel)]="venta.estado" name="estado">
+        <option value="Por entregar">Por entregar</option>
+        <option value="Entregado">Entregado</option>
+        <option value="No entregado">No entregado</option>
+      </select>
+    </div>
+    
+    <button class="btn btn-success">Guardar</button>
+  </form>
+</div>

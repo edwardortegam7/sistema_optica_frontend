@@ -15,6 +15,7 @@ import { ModificarProductoComponent } from './pages/modificar-producto/modificar
 import { TableInventarioComponent } from './pages/table-inventario/table-inventario.component';
 import { TableVentaComponent } from './pages/table-venta/table-venta.component';
 import { RegistrarVentaComponent } from './pages/registrar-venta/registrar-venta.component';
+import { VerProductosComponent } from './pages/ver-productos/ver-productos.component';
 
 const routes: Routes = [
   {
@@ -92,6 +93,12 @@ const routes: Routes = [
     component: RegistrarVentaComponent,
     pathMatch: 'full',
   },
+  {
+    path: 'ver-productos',
+    component: VerProductosComponent,
+    pathMatch: 'full',
+  },
+
 ];
 
 @NgModule({

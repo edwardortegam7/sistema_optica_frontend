@@ -44,6 +44,7 @@ import { AgregarProductoComponent } from './pages/agregar-producto/agregar-produ
 import { ModificarProductoComponent } from './pages/modificar-producto/modificar-producto.component';
 import { TableVentaComponent } from './pages/table-venta/table-venta.component';
 import { RegistrarVentaComponent } from './pages/registrar-venta/registrar-venta.component';
+import { VerProductosComponent } from './pages/ver-productos/ver-productos.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { RegistrarVentaComponent } from './pages/registrar-venta/registrar-venta
     ModificarProductoComponent,
     TableVentaComponent,
     RegistrarVentaComponent,
+    VerProductosComponent,
   ],
   imports: [
     BrowserModule,

@@ -42,7 +42,7 @@
       <a mat-list-item *ngIf="isLoggedIn && userRole === 'Vendedor'" [routerLink]="'/table-venta'" (click)="opened = !opened">Listar ventas</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === 'Vendedor'" [routerLink]="'/registrar-venta'" (click)="opened = !opened">Agregar Venta</a>
       <a mat-list-item *ngIf="isLoggedIn && userRole === ''" [routerLink]="'/solicitar-cita'" (click)="opened = !opened">Solicitar cita</a>
-      <a mat-list-item *ngIf="isLoggedIn && userRole === ''" [routerLink]="'/dashboard'" (click)="opened = !opened">Ver Productos</a>
+      <a mat-list-item *ngIf="isLoggedIn && userRole === ''" [routerLink]="'/ver-productos'" (click)="opened = !opened">Ver Productos</a>
       <!-- Añade más opciones según el rol del usuario -->
     </mat-nav-list>
   </mat-sidenav>
