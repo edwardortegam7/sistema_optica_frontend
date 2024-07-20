@@ -6,10 +6,11 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface TableEmployeesItem {
+  id: number;
   dni: string;
-  name: string;
-  lastname: string;
-  phone: number;
+  nombres: string;
+  apellidos: string;
+  telefono: number;
   rol: string;
 }
 
@@ -77,11 +78,12 @@ export class TableEmployeesDataSource extends DataSource<TableEmployeesItem> {
     return data.sort((a, b) => {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
+        case 'nombres': return compare(a.nombres, b.nombres, isAsc);
         case 'dni': return compare(a.dni, b.dni, isAsc);
-        case 'lastname': return compare(a.lastname, b.lastname, isAsc);
-        case 'phone': return compare(a.phone, b.phone, isAsc);
+        case 'apellidos': return compare(a.apellidos, b.apellidos, isAsc);
+        case 'telefono': return compare(a.telefono, b.telefono, isAsc);
         case 'rol': return compare(a.rol, b.rol, isAsc);
+        case 'id': return compare(a.id, b.id, isAsc);
         default: return 0;
       }
     });

@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AuthInterceptor } from './services/auth.interceptor'; 
 
 import { MatButtonModule } from '@angular/material/button';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -39,6 +40,8 @@ import { SolicitudesCitasComponent } from './pages/solicitudes-citas/solicitudes
 import { PagarCitaComponent } from './pages/pagar-cita/pagar-cita.component';
 import { AssignedDoctorComponent } from './modals/assigned-doctor/assigned-doctor.component';
 import { CitasAsignadasComponent } from './pages/citas-asignadas/citas-asignadas.component';
+import { EditEmployeeComponent } from './pages/edit-employee/edit-employee.component';
+
 
 @NgModule({
   declarations: [
@@ -55,6 +58,7 @@ import { CitasAsignadasComponent } from './pages/citas-asignadas/citas-asignadas
     PagarCitaComponent,
     AssignedDoctorComponent,
     CitasAsignadasComponent,
+    EditEmployeeComponent,
   ],
   imports: [
     BrowserModule,
