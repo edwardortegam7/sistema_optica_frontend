@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import baseUrl from '../helper';
 import { Observable } from 'rxjs';
+import { TableEmployeesItem } from '../../pages/table-employees/table-employees-datasource';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +12,15 @@ export class UserService {
 
   public añadirUsuario(nombreRol: string, user: any) {
     return this.httpClient.post(`${baseUrl}/usuarios/${nombreRol}`, user);
+  }
+
+  public eliminarEmpleado(id: number): Observable<void> {
+    return this.httpClient.delete<void>(`${baseUrl}/usuarios/delete/${id}`);
+  }
+
+  updateEmployee(id: number, employee: TableEmployeesItem): Observable<any> {
+    console.log('Datos a enviar:', employee);
+    return this.httpClient.put(`${baseUrl}/usuarios/update/${id}`, employee);
   }
 
   public getCredentials(employee: any) {
