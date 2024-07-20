@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AuthInterceptor } from './services/auth.interceptor'; 
 
 import { MatButtonModule } from '@angular/material/button';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -45,6 +46,7 @@ import { ModificarProductoComponent } from './pages/modificar-producto/modificar
 import { TableVentaComponent } from './pages/table-venta/table-venta.component';
 import { RegistrarVentaComponent } from './pages/registrar-venta/registrar-venta.component';
 import { VerProductosComponent } from './pages/ver-productos/ver-productos.component';
+import { EditEmployeeComponent } from './pages/edit-employee/edit-employee.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +69,7 @@ import { VerProductosComponent } from './pages/ver-productos/ver-productos.compo
     TableVentaComponent,
     RegistrarVentaComponent,
     VerProductosComponent,
+    EditEmployeeComponent,
   ],
   imports: [
     BrowserModule,
